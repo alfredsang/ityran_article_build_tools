@@ -1,4 +1,4 @@
-#
+ #
 # Licensed to the Apache Software Foundation (ASF) under one
 # or more contributor license agreements.  See the NOTICE file
 # distributed with this work for additional information
@@ -45,14 +45,25 @@ WKHTMLTOPDF = bin/wkhtmltopdf/wkhtmltopdf --encoding utf-8 --page-size Letter --
 all :: tyrandocs
 
 # public task
-tyrandocs:prepare		
+tyrandocs:readme  block_ityran_example
+	
+readme:prepare		
 	@$(TOUCH) $(DOCS)/readme.html
 	@# generate readme html from markdown
-	@echo '<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/></head><body style="font-family: Helvetica Neue; font-size:10pt;">' >	 docs/readme.html
+	@echo '<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><link rel="stylesheet" href="css/preview.css"/></head><body style="font-family: Helvetica Neue; font-size:10pt;">' >	 docs/readme.html
 	@perl bin/Markdown_1.0.1/Markdown.pl README.md >> docs/readme.html
 	@echo '</body></html>'  >> docs/readme.html
 	@# generate readme html to pdf
 	@$(WKHTMLTOPDF) --footer-center "$(COPY_RIGHT)" docs/readme.html docs/readme.pdf > /dev/null 2>> $(ITYRAN_ERROR_LOG)
+
+block_ityran_example:prepare		
+	@$(TOUCH) $(DOCS)/block_ityran_example.html
+	@# generate readme html from markdown
+	@echo '<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><link rel="stylesheet" href="css/preview.css"/></head><body style="font-family: Helvetica Neue; font-size:10pt;">' >	 docs/block_ityran_example.html
+	@perl bin/Markdown_1.0.1/Markdown.pl block_ityran_example.md >> docs/block_ityran_example.html
+	@echo '</body></html>'  >> docs/block_ityran_example.html
+	@# generate readme html to pdf
+	@$(WKHTMLTOPDF) --footer-center "$(COPY_RIGHT)" docs/block_ityran_example.html docs/block_ityran_example.pdf > /dev/null 2>> $(ITYRAN_ERROR_LOG)
 
 prepare: mkdir markdown pdf
 
