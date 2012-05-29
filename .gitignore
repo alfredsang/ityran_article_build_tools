@@ -6,5 +6,5 @@
 
 # Ignore bundler config
 /docs/*
-/log/*.log
+/log/*log
 /bin/*

@@ -79,6 +79,7 @@ mkdir:
 		$(MKPATH) $(DOCS); \
 		chmod 755 $(DOCS); \
 	fi
+	
 # private task
 pdf:
 	@# download wkhtmltopdf if necessary
@@ -94,6 +95,7 @@ markdown:
 	@# download markdown if necessary
 	@if [[ ! -d "bin/Markdown_1.0.1" ]]; then \
 		echo "Downloading Markdown 1.0.1..."; \
+		$(MKPATH) $(BIN); \
 		curl -L http://daringfireball.net/projects/downloads/Markdown_1.0.1.zip > bin/Markdown_1.0.1.zip; \
 		unzip bin/Markdown_1.0.1.zip -d ./bin/ > /dev/null; \
 	fi
