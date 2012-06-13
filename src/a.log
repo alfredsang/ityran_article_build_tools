@@ -1,0 +1,15 @@
+Usage: opt_parser COMMAND [OPTIONS]
+
+Commands
+     start: start server
+     stop: stop server
+     restart: restart server
+
+Options
+    -e, --environment ENVIRONMENT    which enviroment you want server run
+    -d, --daemon                     runing on daemon mode?
+        --delay N                    Delay N seconds before executing
+    -j, --jurisdictions x,y,z        which jurisdiction will start
+    -s, --servers SERVERS            which server will start between a,b,c
+    -v, --[no-]verbose               Run verbosely
+    -h, --help                       help
