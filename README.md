@@ -54,7 +54,27 @@ FAQ
 
 
 <br />
+之前做了很多命令规划，结果发现很难去执行，这是为什么呢？
+
+放下所有的计划，一步一步走吧。
+
+1)看看初始化一篇文章应该有哪些内容
+2）rake简单的完成此项功能即可
+
+
+~/.ityran
+
+rakefile
+r/md
+r/stye
+r/makefile
+
+
  
+
+
+
+
 MORE INFO
 ----------
 * [泰然翻译小组官方网址](http://article.ityran.com/)      
