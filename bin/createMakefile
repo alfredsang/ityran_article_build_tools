@@ -1,0 +1,5 @@
+#! /bin/bash
+mkdir -p ../no320doc/$1
+sed 's/block_ityran_example/'$1'/g' ../config/template/__Makefile > ../no320doc/$1/Makefile
+#cd ../no320doc/$1 && make
+

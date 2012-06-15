@@ -1,0 +1,6 @@
+#! /bin/bash 
+mkdir -p ../no320doc/$1/docs/css
+./createMakefile $1
+cd ../no320doc/$1
+echo "## test \ddfgd " > $1.md
+make
