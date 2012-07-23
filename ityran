@@ -42,6 +42,7 @@ eval set -- "$TEMP"
 #经过getopt的处理，下面处理具体选项。
 
 while true ; do
+	echo $1
         case "$1" in
                 -a|--a-long) echo "Option a" ; shift ;;
                 -b|--b-long) 
@@ -60,7 +61,8 @@ while true ; do
                 *) echo "Internal error!" ; exit 1 ;;
         esac
 done
-echo "Remaining arguments:"
-for arg do
-   echo '--> '"\`$arg'" ;
-done
+# 
+# echo "Remaining arguments:"
+# for arg do
+#    echo '--> '"\`$arg'" ;
+# done

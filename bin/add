@@ -1,4 +1,5 @@
 #! /bin/bash 
+echo 'invoke add.sh script'
 mkdir -p ../no320doc/$1/docs/css
 ./createMakefile $1
 cd ../no320doc/$1

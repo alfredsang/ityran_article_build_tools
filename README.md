@@ -53,6 +53,56 @@ FAQ
 集成主题，改进字体，ui
 
 <br />
+
+
+v2.0
+----------
+
+1. 执行下面命令
+	[ityran_article_build_tools/bin] ./add test
+	
+会在ityran_article_build_tools的根目录下创建no320doc目录。下面看一下目录结构：
+
+	[ityran_article_build_tools] ls -R no320doc 
+	test
+
+	no320doc/test:
+	Makefile docs     log      test.md
+
+	no320doc/test/docs:
+	css      test.html test.pdf
+
+	no320doc/test/docs/css:
+	preview.css
+
+	no320doc/test/log:
+	ityran_error_log
+
+2. 编辑no320doc/test/test.md文件，修改需要修改的内容：
+
+	[ityran_article_build_tools] mate  no320doc/test/test.md
+
+3. 编译
+
+	[ityran_article_build_tools] cd no320doc/test
+	[ityran_article_build_tools/no320doc/test] ls
+	Makefile docs     log      test.md
+	[ityran_article_build_tools/no320doc/test] make build
+	恭喜!终于生成完成了
+
+	
+4. 去查看你的文档
+
+	[ityran_article_build_tools/no320doc/test] ls docs 
+	css     test.html test.pdf
+
+最终生成的文档
+
+- test.html
+- test.pdf
+
+
+
  
 MORE INFO
 ----------
